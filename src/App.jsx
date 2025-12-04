@@ -100,7 +100,7 @@ const App = () => {
           <ShinyText
             text="Many Malaysian households generate surplus solar energy that often goes unused, while low-income communities still struggle with expensive electricity. There is currently no trusted platform for individuals to donate their surplus renewable energy. This creates a gap where clean energy is wasted, social welfare opportunities are lost, and progress toward SDG 7 remains slow. A smart, automated AI system is needed to detect surplus solar generation, match it with communities facing energy shortages, and transparently verify donation to maximise social and environmental impact."
             disabled={false}
-            speed={3}
+            speed={5}
             className='custom-class'
           />
         </div>
