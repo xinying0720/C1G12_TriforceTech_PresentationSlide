@@ -72,7 +72,15 @@ const App = () => {
 
 
       {/* SECTION 3 — AI video */}
-      <section className="w-full h-screen bg-black flex justify-center items-center">
+      <section className="w-full h-screen bg-black flex justify-center items-center relative overflow-hidden">
+        <video
+          src="/C1G12_TriforceTech_StoryVideo.mp4"
+          autoPlay
+          loop
+          controls
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </section>
 
 
