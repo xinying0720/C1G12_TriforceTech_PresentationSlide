@@ -18,14 +18,14 @@ import ZakatEndorsementImg from './assets/zakat_endorsement.jpg';
 import CurvedLoop from './CurvedLoop';
 
 const items = [
-  { color: 'blue', label: 'Rising Demand for Sustainable Living' },
-  { color: 'purple', label: 'Huge Muslim Population in Malaysia' },
-  { color: 'orange', label: 'Government Push for Renewable Energy' },
+  { color: 'blue', label: '70%+Rising Demand for Sustainable Living' },
+  { color: 'purple', label: '22.4 million Muslim Population in Malaysia' },
+  { color: 'orange', label: 'Government Push for Renewable Energy which targets 31% RE by 2035' },
 ];
 const App = () => {
   return (
     <>
-      {/* SECTION 1 */}
+      {/* SECTION 1 — OurWebsite*/}
       <div className="w-full h-screen relative bg-black flex justify-center items-center">
         <div className="w-full h-full relative">
           <Particles
@@ -46,36 +46,21 @@ const App = () => {
             Presented by Triforce Tech || Aligned with SDG7.1 & 7.2
           </p>
 
-          {/* Group Members Section */}
-          <ShinyText
-            text="Group Members :"
-            disabled={false}
-            speed={3}
-            className="text-white text-2xl text-center relative z-10 mt-4"
-          />
-          <ShinyText
-            text="Lim Jia Qian , Lim Xin Ying"
-            disabled={false}
-            speed={3}
-            className="text-white text-1xl text-center relative z-10"
-          />
-          <ShinyText
-            text="Ooi Jia Hui , Beh Jia Xin"
-            disabled={false}
-            speed={3}
-            className="text-white text-1xl text-center relative z-10"
-          />
-          <ShinyText
-            text="Felicia Sia Xin Rou"
-            disabled={false}
-            speed={3}
-            className="text-white text-1xl text-center relative z-10"
-          />
+
         </div>
       </div>
-      {/* SECTION 2 */}
-      <section className="w-full h-screen flex justify-center items-center bg-black">
-        <div className="w-full h-full relative">
+
+
+      {/* SECTION 2 — Group Members */}
+      <section className="w-full h-screen flex flex-col justify-center items-center bg-black">
+
+        {/* Title */}
+        <h2 className="text-white text-5xl font-bold mb-3 text-center">
+          Group Members
+        </h2>
+
+        {/* Circular Gallery */}
+        <div className="w-full h-full relative flex justify-center items-center">
           <CircularGallery
             bend={3}
             textColor="#ffffff"
@@ -85,7 +70,44 @@ const App = () => {
         </div>
       </section>
 
-      {/* SECTION 3 */}
+
+      {/* SECTION 3 — AI video */}
+      <section className="w-full h-screen bg-black flex justify-center items-center">
+      </section>
+
+
+      {/* SECTION 4 — Problem Statement */}
+      <section className="w-full h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
+        {/* Galaxy Background */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <Galaxy
+            mouseRepulsion={true}
+            mouseInteraction={true}
+            density={1.5}
+            glowIntensity={0.5}
+            saturation={0.8}
+            hueShift={180}
+          />
+        </div>
+
+        {/* Title */}
+        <h2 className="text-white text-5xl font-bold mb-12 text-center relative z-10">
+          Problem Statement
+        </h2>
+
+        {/* ShinyText */}
+        <div className="max-w-4xl text-center text-xl text-white leading-relaxed relative z-10">
+          <ShinyText
+            text="Many Malaysian households generate surplus solar energy that often goes unused, while low-income communities still struggle with expensive electricity. There is currently no trusted platform for individuals to donate their surplus renewable energy. This creates a gap where clean energy is wasted, social welfare opportunities are lost, and progress toward SDG 7 remains slow. A smart, automated AI system is needed to detect surplus solar generation, match it with communities facing energy shortages, and transparently verify donation to maximise social and environmental impact."
+            disabled={false}
+            speed={3}
+            className='custom-class'
+          />
+        </div>
+      </section>
+
+
+      {/* SECTION 5 - SolarAid Intro */}
       <section className="w-full h-screen flex justify-center items-center bg-black px-6">
         <div className="max-w-4xl w-full">
           <ElectricBorder
@@ -96,21 +118,38 @@ const App = () => {
             style={{ borderRadius: 16, padding: 24 }}
           >
             <div className="text-center">
+
+              {/* Title */}
               <h2 className="text-white text-5xl font-bold mb-6">
-                Affordable and Clean Energy
+                SDG7 : Affordable and Clean Energy
               </h2>
 
-              <p className="text-white text-xl opacity-90 leading-relaxed">
+              {/* Main Paragraph */}
+              <p className="text-white text-xl opacity-90 leading-relaxed mb-8">
                 SolarAid is a digital platform that enables Malaysians to donate their
                 unused electricity, support Green Waqf initiatives, and bring clean,
                 dependable energy to those who need it most.
               </p>
+
+              {/* SDG7.1 Row */}
+              <p className="text-white text-lg opacity-90 leading-relaxed mb-4">
+                <strong className="text-cyan-300">SDG7.1:</strong>
+                &nbsp;“By 2030, ensure universal access to affordable, reliable and modern energy services.”
+              </p>
+
+              {/* SDG7.2 Row */}
+              <p className="text-white text-lg opacity-90 leading-relaxed">
+                <strong className="text-cyan-300">SDG7.2:</strong>
+                &nbsp;“By 2030, substantially increase the share of renewable energy in the global energy mix.”
+              </p>
+
             </div>
           </ElectricBorder>
         </div>
       </section>
 
-      {/* SECTION 4 — Scope Statement */}
+
+      {/* SECTION 6 — Scope Statement */}
       <section className="w-full h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
         {/* Galaxy Background */}
         <div className="absolute top-0 left-0 w-full h-full">
@@ -155,60 +194,14 @@ const App = () => {
                  text-xl max-w-md text-center shadow-lg hover:shadow-cyan-400/60 
                  transition-all duration-300"
           >
-            <strong className="text-2xl block mb-3">Target Business Partner</strong>
+            <strong className="text-2xl block mb-7">Target Business Partner</strong>
             TNB
           </div>
 
         </div>
       </section>
-      {/* SECTION 5 — Problem Statement with ShinyText and Galaxy Background */}
-      <section className="w-full h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
-        {/* Galaxy Background */}
-        <div className="absolute top-0 left-0 w-full h-full">
-          <Galaxy
-            mouseRepulsion={true}
-            mouseInteraction={true}
-            density={1.5}
-            glowIntensity={0.5}
-            saturation={0.8}
-            hueShift={180}
-          />
-        </div>
 
-        {/* Title */}
-        <h2 className="text-white text-5xl font-bold mb-12 text-center relative z-10">
-          Problem Statement
-        </h2>
 
-        {/* ShinyText */}
-        <div className="max-w-4xl text-center text-xl text-white leading-relaxed relative z-10">
-          <ShinyText
-            text="Many Malaysian households generate surplus solar energy that often goes unused, while low-income communities still struggle with expensive electricity. There is currently no trusted platform for individuals to donate their surplus renewable energy. This creates a gap where clean energy is wasted, social welfare opportunities are lost, and progress toward SDG 7 remains slow. A smart, automated AI system is needed to detect surplus solar generation, match it with communities facing energy shortages, and transparently verify donation to maximise social and environmental impact."
-            disabled={false}
-            speed={3}
-            className='custom-class'
-          />
-        </div>
-      </section>
-      {/* SECTION 6 — The Solution with Core Features */}
-      <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
-
-        {/* MagicBento Component */}
-        <div className="w-full max-w-6xl flex justify-center relative z-10">
-          <MagicBento
-            textAutoHide={true}
-            enableStars={true}
-            enableSpotlight={true}
-            enableBorderGlow={true}
-            enableTilt={true}
-            enableMagnetism={true}
-            clickEffect={true}
-            spotlightRadius={300}
-            particleCount={12}
-            glowColor="132, 0, 255"
-          />
-        </div>
-      </section>
       {/* SECTION 7 — System Architecture */}
       <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
         {/* LightRays Background */}
@@ -239,7 +232,30 @@ const App = () => {
           className="max-w-4xl w-full h-auto object-contain relative z-10"
         />
       </section>
-      {/* SECTION 8 — Market Analysis */}
+
+
+      {/* SECTION 8 — The Solution with Core Features */}
+      <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
+
+        {/* MagicBento Component */}
+        <div className="w-full max-w-6xl flex justify-center relative z-10">
+          <MagicBento
+            textAutoHide={true}
+            enableStars={true}
+            enableSpotlight={true}
+            enableBorderGlow={true}
+            enableTilt={true}
+            enableMagnetism={true}
+            clickEffect={true}
+            spotlightRadius={300}
+            particleCount={12}
+            glowColor="132, 0, 255"
+          />
+        </div>
+      </section>
+      
+
+      {/* SECTION 9 — Market Analysis */}
       <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
         <h2 className="text-white text-5xl font-bold mb-10 text-center">
           Market Analysis
@@ -249,7 +265,9 @@ const App = () => {
           <GlassIcons items={items} />
         </div>
       </section>
-      {/* SECTION 9 — Differentiate with Market Model Nowadays */}
+
+
+      {/* SECTION 10 — Differentiate with Market Model Nowadays */}
       <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
         {/* Title */}
         <h2 className="text-white text-5xl font-bold mb-10 text-center">
@@ -277,7 +295,9 @@ const App = () => {
           />
         </div>
       </section>
-      {/* SECTION 10 — Environment & Society impact and Potential Improvements */}
+
+
+      {/* SECTION 11 — Environment & Society impact and Potential Improvements */}
       <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
         {/* Title */}
         <h2 className="text-white text-5xl font-bold mb-10 text-center">
@@ -394,7 +414,9 @@ const App = () => {
 
         </div>
       </section>
-      {/* SECTION 11 — Conclusion */}
+
+
+      {/* SECTION 12 — Conclusion */}
       <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
         {/* LightRays Background */}
         <div className="absolute top-0 left-0 w-full h-full">
@@ -424,7 +446,9 @@ const App = () => {
           It doesn’t just deliver energy. It sends light, empowering communities, supporting SDG7, and redefining charitable giving in Malaysia.
         </div>
       </section>
-      {/* SECTION 12 — CurvedLoop Outro */}
+
+
+      {/* SECTION 13 — CurvedLoop Outro */}
       <section className="w-full h-screen bg-black flex justify-center items-center relative overflow-hidden">
         <CurvedLoop
           marqueeText="Thank You for Watching ✦ SolarAid ✦"
@@ -435,6 +459,7 @@ const App = () => {
           className="text-white text-7xl md:text-9xl font-bold"
         />
       </section>
+
     </>
   )
 }

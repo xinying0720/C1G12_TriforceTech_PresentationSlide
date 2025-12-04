@@ -377,6 +377,7 @@ class App {
       { image: `https://share.google/images/whO1CCXn6GymIVJp0`, text: 'Good Boy' },
       { image: `https://picsum.photos/seed/21/800/600?grayscale`, text: 'Coastline' },
       { image: `https://picsum.photos/seed/12/800/600?grayscale`, text: 'Palm Trees' }
+
     ];
     const galleryItems = items && items.length ? items : defaultItems;
     this.mediasImages = galleryItems.concat(galleryItems);
