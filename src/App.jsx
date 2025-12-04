@@ -8,7 +8,20 @@ import ShinyText from './ShinyText';
 import MagicBento from './MagicBento'
 import LightRays from './LightRays';
 import SystemDiagram from './assets/system-architecture.png';
+import GlassIcons from './GlassIcons'
+import { FiTrendingUp, FiUsers, FiSun } from "react-icons/fi";
+import AnimatedList from './AnimatedList'
+import PixelTransition from './PixelTransition';
+import GreenWaqfImg from './assets/green_waqf.jpg';
+import ContinuousCharityImg from './assets/continuous_charity.jpg';
+import ZakatEndorsementImg from './assets/zakat_endorsement.jpg';
+import CurvedLoop from './CurvedLoop';
 
+const items = [
+  { color: 'blue', label: 'Rising Demand for Sustainable Living' },
+  { color: 'purple', label: 'Huge Muslim Population in Malaysia' },
+  { color: 'orange', label: 'Government Push for Renewable Energy' },
+];
 const App = () => {
   return (
     <>
@@ -28,7 +41,7 @@ const App = () => {
         </div>
 
         <div className="absolute flex flex-col justify-center items-center space-y-3">
-          <h1 className="glow-text text-8xl mb-10 relative z-10">SolaRaid</h1>
+          <h1 className="glow-text text-8xl mb-10 relative z-10">SolarAid</h1>
           <p className="text-white text-center text-6ml relative z-10">
             Presented by Triforce Tech || Aligned with SDG7.1 & 7.2
           </p>
@@ -224,6 +237,202 @@ const App = () => {
           src={SystemDiagram} // use the imported variable
           alt="System Architecture"
           className="max-w-4xl w-full h-auto object-contain relative z-10"
+        />
+      </section>
+      {/* SECTION 8 — Market Analysis */}
+      <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
+        <h2 className="text-white text-5xl font-bold mb-10 text-center">
+          Market Analysis
+        </h2>
+
+        <div className="w-full max-w-6xl">
+          <GlassIcons items={items} />
+        </div>
+      </section>
+      {/* SECTION 9 — Differentiate with Market Model Nowadays */}
+      <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
+        {/* Title */}
+        <h2 className="text-white text-5xl font-bold mb-10 text-center">
+          Differentiate with Market Model Nowadays
+        </h2>
+
+        {/* Animated List */}
+        <div className="w-full max-w-4xl flex justify-center">
+          <AnimatedList
+            items={[
+              "SolarAid introduces a brand-new asset class: “Solar Energy as Green Waqf”",
+              "No existing platform in Malaysia treats solar electricity as mal (wealth)",
+              "Helping community in needs in term of electricity",
+              "Generate energy-based Jariah donation certificate at the same time",
+              "Uses AI to prioritize communities for continuous charity (Jariah) impact",
+              "Offers leaderboard & donation prediction",
+              "Uses AI as a Wakil (trusted Islamic agent)",
+              "This gives Solaraid a first-mover advantage"
+            ]}
+            onItemSelect={(item, index) => console.log(item, index)}
+            showGradients={true}
+            enableArrowNavigation={true}
+            displayScrollbar={true}
+            className="mx-auto"
+          />
+        </div>
+      </section>
+      {/* SECTION 10 — Environment & Society impact and Potential Improvements */}
+      <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
+        {/* Title */}
+        <h2 className="text-white text-5xl font-bold mb-10 text-center">
+          <span className="block">Environment & Society impact and</span>
+          <span className="block">Potential Improvements</span>
+        </h2>
+
+        {/* PixelTransition Boxes */}
+        <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8 justify-center">
+
+          <PixelTransition
+            firstContent={
+              <img
+                src={GreenWaqfImg}  // imported at top
+                alt="Promotes Renewable Energy"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            }
+            secondContent={
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "grid",
+                  placeItems: "center",
+                  backgroundColor: "#111",
+                  color: "#fff",
+                  textAlign: "center",
+                  padding: 20,
+                }}
+              >
+                <p>
+                  Promotes Renewable Energy (Green Waqf)<br /><br />
+                  Reduces Carbon Footprint<br /><br />
+                  Sustainable Energy Access (SDG 7.1 & 7.2)
+                </p>
+              </div>
+            }
+            gridSize={12}
+            pixelColor='#ffffff'
+            once={false}
+            animationStepDuration={0.4}
+            className="custom-pixel-card w-full md:w-1/3 h-64"
+          />
+
+          <PixelTransition
+            firstContent={
+              <img
+                src={ContinuousCharityImg}
+                alt="Encourages Continuous Charity"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            }
+            secondContent={
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "grid",
+                  placeItems: "center",
+                  backgroundColor: "#111",
+                  color: "#fff",
+                  textAlign: "center",
+                  padding: 20,
+                }}
+              >
+                <p>
+                  Encourages Continuous Charity (Jariah)<br /><br />
+                  Supports Vulnerable Communities<br /><br />
+                  Fosters Community Participation
+                </p>
+              </div>
+            }
+            gridSize={12}
+            pixelColor='#ffffff'
+            once={false}
+            animationStepDuration={0.4}
+            className="custom-pixel-card w-full md:w-1/3 h-64"
+          />
+
+          <PixelTransition
+            firstContent={
+              <img
+                src={ZakatEndorsementImg}
+                alt="Secure Zakat Authority Endorsement"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            }
+            secondContent={
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  display: "grid",
+                  placeItems: "center",
+                  backgroundColor: "#111",
+                  color: "#fff",
+                  textAlign: "center",
+                  padding: 20,
+                }}
+              >
+                <p>
+                  Secure Zakat Authority Endorsement to gain direct financial returns<br /><br />
+                  Form strategic partnerships to improve trustworthy
+                </p>
+              </div>
+            }
+            gridSize={14}
+            pixelColor='#ffffff'
+            once={false}
+            animationStepDuration={0.4}
+            className="custom-pixel-card w-full md:w-1/3 h-64"
+          />
+
+        </div>
+      </section>
+      {/* SECTION 11 — Conclusion */}
+      <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
+        {/* LightRays Background */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#00ffff"
+            raysSpeed={1.5}
+            lightSpread={0.8}
+            rayLength={1.2}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0.1}
+            distortion={0.05}
+            className="custom-rays"
+          />
+        </div>
+
+        {/* Title */}
+        <h2 className="text-white text-5xl font-bold mb-12 text-center relative z-10">
+          Conclusion
+        </h2>
+
+        {/* Conclusion Text */}
+        <div className="max-w-4xl text-center text-xl text-white leading-relaxed relative z-10">
+          SolarAid turns surplus solar energy into Green Waqf, letting users donate electricity to communities in need while sharing their Jariah Certificate on social media.<br /><br />
+          With AI-powered surplus detection, impact tracking, and automated certificates, the platform makes giving easy, transparent, and meaningful.<br /><br />
+          It doesn’t just deliver energy. It sends light, empowering communities, supporting SDG7, and redefining charitable giving in Malaysia.
+        </div>
+      </section>
+      {/* SECTION 12 — CurvedLoop Outro */}
+      <section className="w-full h-screen bg-black flex justify-center items-center relative overflow-hidden">
+        <CurvedLoop
+          marqueeText="Thank You for Watching ✦ SolarAid ✦"
+          speed={2}
+          curveAmount={400}
+          direction="left"
+          interactive={true}
+          className="text-white text-7xl md:text-9xl font-bold"
         />
       </section>
     </>
