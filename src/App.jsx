@@ -22,6 +22,12 @@ const items = [
   { color: 'purple', label: '22.4 million Muslim Population in Malaysia' },
   { color: 'orange', label: 'Government Push for Renewable Energy which targets 31% RE by 2035' },
 ];
+const SponsorItem = ({ img, name }) => (
+  <div className="flex items-center">
+    <img src={img} className="w-12 h-12 mr-3" />
+    <span className="text-black text-3xl">{name}</span>
+  </div>
+);
 const App = () => {
   return (
     <>
@@ -457,7 +463,7 @@ const App = () => {
 
 
       {/* SECTION 13 — CurvedLoop Outro */}
-      <section className="w-full h-screen bg-black flex justify-center items-center relative overflow-hidden">
+      <section className="w-full min-h-[40vh] bg-gradient-to-b from-black to-white/0 flex flex-col justify-center items-center py-16 text-center space-y-14 relative overflow-hidden">
         <CurvedLoop
           marqueeText="Thank You for Watching ✦ SolarAid ✦"
           speed={2}
@@ -466,6 +472,73 @@ const App = () => {
           interactive={true}
           className="text-white text-7xl md:text-9xl font-bold"
         />
+      </section>
+
+      {/* SECTION 14 — Powered By */}
+      <section className="powered-section w-full min-h-[40vh] flex flex-col justify-center items-center py-16 text-center space-y-14 relative overflow-hidden">
+
+          <h3 className="text-black text-4xl font-bold mb-6">Powered By</h3>
+
+          {/* ROW 1 */}
+          <div className="w-full overflow-hidden">
+              <div className="marquee-right flex whitespace-nowrap gap-75">
+
+                  {/* GROUP 1 */}
+                  <div className="flex items-center gap-75 min-w-max px-10">
+                      <SponsorItem img="/sponsors/sealion.png" name="Sea-Lion AI" />
+                      <SponsorItem img="/sponsors/cloudflare.png" name="Cloudflare" />
+                      <SponsorItem img="/sponsors/gentech.png" name="GenTech AI" />
+                  </div>
+
+                  {/* GROUP 2 */}
+                  <div className="flex items-center gap-75 min-w-max px-10">
+                      <SponsorItem img="/sponsors/sealion.png" name="Sea-Lion AI" />
+                      <SponsorItem img="/sponsors/cloudflare.png" name="Cloudflare" />
+                      <SponsorItem img="/sponsors/gentech.png" name="GenTech AI" />
+                  </div>
+
+              </div>
+          </div>
+
+          {/* ROW 2 */}
+          <div className="w-full overflow-hidden">
+              <div className="marquee-left flex whitespace-nowrap gap-77">
+
+                  {/* GROUP 1 */}
+                  <div className="flex items-center gap-75 min-w-max px-10">
+                      <SponsorItem img="/sponsors/jamai.png" name="Jam AI" />
+                      <SponsorItem img="/sponsors/assembly.png" name="AssemblyAI" />
+                      <SponsorItem img="/sponsors/tavily.png" name="Tavily" />
+                  </div>
+
+                  {/* GROUP 2 */}
+                  <div className="flex items-center gap-75 min-w-max px-10">
+                      <SponsorItem img="/sponsors/jamai.png" name="Jam AI" />
+                      <SponsorItem img="/sponsors/assembly.png" name="AssemblyAI" />
+                      <SponsorItem img="/sponsors/tavily.png" name="Tavily" />
+                  </div>
+
+              </div>
+          </div>
+
+          <style>{`
+              .marquee-right {
+                  animation: marqueeRight 25s linear infinite;
+              }
+              @keyframes marqueeRight {
+                  0% { transform: translateX(0%); }
+                  100% { transform: translateX(-50%); }
+              }
+
+              .marquee-left {
+                  animation: marqueeLeft 25s linear infinite;
+              }
+              @keyframes marqueeLeft {
+                  0% { transform: translateX(-50%); }
+                  100% { transform: translateX(0%); }
+              }
+          `}</style>
+
       </section>
 
     </>
