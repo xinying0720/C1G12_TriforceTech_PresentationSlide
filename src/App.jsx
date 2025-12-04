@@ -5,6 +5,9 @@ import ElectricBorder from './ElectricBorder'
 import TargetCursor from './TargetCursor';
 import Galaxy from './Galaxy';
 import ShinyText from './ShinyText';
+import MagicBento from './MagicBento'
+import LightRays from './LightRays';
+import SystemDiagram from './assets/system-architecture.png';
 
 const App = () => {
   return (
@@ -173,6 +176,55 @@ const App = () => {
             className='custom-class'
           />
         </div>
+      </section>
+      {/* SECTION 6 — The Solution with Core Features */}
+      <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
+
+        {/* MagicBento Component */}
+        <div className="w-full max-w-6xl flex justify-center relative z-10">
+          <MagicBento
+            textAutoHide={true}
+            enableStars={true}
+            enableSpotlight={true}
+            enableBorderGlow={true}
+            enableTilt={true}
+            enableMagnetism={true}
+            clickEffect={true}
+            spotlightRadius={300}
+            particleCount={12}
+            glowColor="132, 0, 255"
+          />
+        </div>
+      </section>
+      {/* SECTION 7 — System Architecture */}
+      <section className="w-full min-h-screen bg-black flex flex-col items-center justify-center px-6 relative overflow-hidden">
+        {/* LightRays Background */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#00ffff"
+            raysSpeed={1.5}
+            lightSpread={0.8}
+            rayLength={1.2}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0.1}
+            distortion={0.05}
+            className="custom-rays"
+          />
+        </div>
+
+        {/* Title */}
+        <h2 className="text-white text-5xl font-bold mb-6 relative z-10 text-center">
+          System Architecture
+        </h2>
+
+        {/* Image */}
+        <img
+          src={SystemDiagram} // use the imported variable
+          alt="System Architecture"
+          className="max-w-4xl w-full h-auto object-contain relative z-10"
+        />
       </section>
     </>
   )

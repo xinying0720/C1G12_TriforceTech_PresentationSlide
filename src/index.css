@@ -237,3 +237,63 @@
 }
 
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.magic-bento-card {
+  position: relative;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: white;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.magic-bento-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(132,0,255,1.0);
+}
+
+.magic-bento-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.magic-bento-card__description {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.magic-bento-card__label {
+  font-size: 0.875rem;
+  color: #7df9ff;
+  margin-bottom: 0.5rem;
+}
+
+.magic-bento-card--border-glow {
+  border: 2px solid rgba(132,0,255,0.5);
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.light-rays-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  pointer-events: none;
+  z-index: 3;
+  overflow: hidden;
+}
+
