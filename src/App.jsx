@@ -531,7 +531,7 @@ const App = () => {
 
           <style>{`
               .marquee-right {
-                  animation: marqueeRight 25s linear infinite;
+                  animation: marqueeRight 10s linear infinite;
               }
               @keyframes marqueeRight {
                   0% { transform: translateX(0%); }
