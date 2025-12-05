@@ -84,8 +84,6 @@ const App = () => {
       <section className="w-full h-screen bg-black flex justify-center items-center relative overflow-hidden">
         <video
           src="/C1G12_TriforceTech_StoryVideo.mp4"
-          autoPlay
-          loop
           controls
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
@@ -243,27 +241,26 @@ const App = () => {
         </h2>
 
         {/* Image */}
-        {/* Clickable Image */}
-<img
-  src={SystemDiagram}
-  alt="System Architecture"
-  className="max-w-6xl w-full h-auto object-contain relative z-10 cursor-pointer transition-transform"
-  onClick={() => setZoomOpen(true)}
-/>
+        <img
+          src={SystemDiagram}
+          alt="System Architecture"
+          className="max-w-6xl w-full h-auto object-contain relative z-10 cursor-pointer transition-transform"
+          onClick={() => setZoomOpen(true)}
+        />
 
-{/* Zoom Modal */}
-{zoomOpen && (
-  <div
-    className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 backdrop-blur-md"
-    onClick={() => setZoomOpen(false)}
-  >
-    <img
-      src={SystemDiagram}
-      alt="Zoomed Architecture"
-      className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
-    />
-  </div>
-)}
+        {/* Zoom Modal */}
+        {zoomOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 backdrop-blur-md"
+            onClick={() => setZoomOpen(false)}
+          >
+            <img
+              src={SystemDiagram}
+              alt="Zoomed Architecture"
+              className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            />
+          </div>
+        )}
 
       </section>
 
