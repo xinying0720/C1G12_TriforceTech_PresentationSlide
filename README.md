@@ -1,16 +1,48 @@
-# React + Vite
+# C1G12_TriforceTech_PresentationSlide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## An Interactive Presentation Slide 
+This frontend project is an *interactive, animation-rich* presentation slide built using React, TailwindCSS, and several custom visual components. It was created to present SolarAid, a digital solution aligned with *SDG 7: Affordable and Clean Energy, developed by Triforce Tech.*
 
-Currently, two official plugins are available:
+The slide showcases the problem statement, solution architecture, AI features, market analysis, and social impact of the SolarAid platform.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Purpose of This Frontend
+This application is not a traditional web app.
+It serves as a full-screen animated presentation deck that replaces tools like PowerPoint or Google Slides.
+```
+The goal is to create a more immersive visual experience through:
+- Parallax effects
+- Particle animations
+- AI-styled motion graphics
+- Animated transitions
+- Interactive zoomable system diagram
+- Dynamic gallery and looping marquees
+```
 
-## React Compiler
+## Live Presentation Features
+This project contains 14 sections, each acting as a slide:
+```
+1. Title Slide
+2. Group Members
+3. AI Video
+4. Problem Statement
+5. SolarAid Introduction 
+6. Scope Statement
+7. System Architecture
+8. Solution Features
+9. Market Analysis
+10. Market Model Differentiation
+11. Environmental & Social Impact
+12. Conclusion
+13. Outro
+14. Powered By Section
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How to Run the PresentationSlide
+*Install dependencies*
+```
+npm install
+```
+*Start the development server*
+```
+npm run dev
+```
