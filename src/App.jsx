@@ -502,24 +502,26 @@ const App = () => {
 
           {/* ROW 2 */}
           <div className="w-full overflow-hidden">
-              <div className="marquee-left flex whitespace-nowrap gap-20">
+              <div className="marquee-left flex whitespace-nowrap gap-10">
 
                   {/* GROUP 1 */}
-                  <div className="flex items-center gap-30 min-w-max px-10">
+                  <div className="flex items-center gap-20 min-w-max px-10">
                       <SponsorItem img="/sponsors/jamai.png" name="Jam AI" />
                       <SponsorItem img="/sponsors/assembly.png" name="AssemblyAI" />
                       <SponsorItem img="/sponsors/tavily.png" name="Tavily" />
                       <SponsorItem img="/sponsors/github.png" name="GitHub" />
                       <SponsorItem img="/sponsors/supabase.png" name="Supabase" />
+                      <SponsorItem img="/sponsors/langchain.png" name="LangChain" />
                   </div>
 
                   {/* GROUP 2 */}
-                  <div className="flex items-center gap-30 min-w-max px-10">
+                  <div className="flex items-center gap-20 min-w-max px-10">
                       <SponsorItem img="/sponsors/jamai.png" name="Jam AI" />
                       <SponsorItem img="/sponsors/assembly.png" name="AssemblyAI" />
                       <SponsorItem img="/sponsors/tavily.png" name="Tavily" />
                       <SponsorItem img="/sponsors/github.png" name="GitHub" />
                       <SponsorItem img="/sponsors/supabase.png" name="Supabase" />
+                      <SponsorItem img="/sponsors/langchain.png" name="LangChain" />
                   </div>
 
               </div>
