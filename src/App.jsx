@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Particles from './Particles'
 import CircularGallery from './CircularGallery'
 import ElectricBorder from './ElectricBorder'
@@ -7,7 +7,8 @@ import Galaxy from './Galaxy';
 import ShinyText from './ShinyText';
 import MagicBento from './MagicBento'
 import LightRays from './LightRays';
-import SystemDiagram from './assets/system-architecture.png';
+import SystemDiagram from './assets/SystemArchitecture.png';
+import MarketModel from './assets/DifferentiateMarketModel.png';
 import GlassIcons from './GlassIcons'
 import { FiTrendingUp, FiUsers, FiSun } from "react-icons/fi";
 import AnimatedList from './AnimatedList'
@@ -29,6 +30,8 @@ const SponsorItem = ({ img, name }) => (
   </div>
 );
 const App = () => {
+  const [zoomOpen, setZoomOpen] = useState(false);
+
   return (
     <>
       {/* SECTION 1 — OurWebsite*/}
@@ -240,11 +243,28 @@ const App = () => {
         </h2>
 
         {/* Image */}
-        <img
-          src={SystemDiagram} // use the imported variable
-          alt="System Architecture"
-          className="max-w-4xl w-full h-auto object-contain relative z-10"
-        />
+        {/* Clickable Image */}
+<img
+  src={SystemDiagram}
+  alt="System Architecture"
+  className="max-w-6xl w-full h-auto object-contain relative z-10 cursor-pointer transition-transform"
+  onClick={() => setZoomOpen(true)}
+/>
+
+{/* Zoom Modal */}
+{zoomOpen && (
+  <div
+    className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 backdrop-blur-md"
+    onClick={() => setZoomOpen(false)}
+  >
+    <img
+      src={SystemDiagram}
+      alt="Zoomed Architecture"
+      className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"
+    />
+  </div>
+)}
+
       </section>
 
 
@@ -288,26 +308,11 @@ const App = () => {
           Differentiate with Market Model Nowadays
         </h2>
 
-        {/* Animated List */}
-        <div className="w-full max-w-4xl flex justify-center">
-          <AnimatedList
-            items={[
-              "SolarAid introduces a brand-new asset class: “Solar Energy as Green Waqf”",
-              "No existing platform in Malaysia treats solar electricity as mal (wealth)",
-              "Helping community in needs in term of electricity",
-              "Generate energy-based Jariah donation certificate at the same time",
-              "Uses AI to prioritize communities for continuous charity (Jariah) impact",
-              "Offers leaderboard & donation prediction",
-              "Uses AI as a Wakil (trusted Islamic agent)",
-              "This gives Solaraid a first-mover advantage"
-            ]}
-            onItemSelect={(item, index) => console.log(item, index)}
-            showGradients={true}
-            enableArrowNavigation={true}
-            displayScrollbar={true}
-            className="mx-auto"
-          />
-        </div>
+        <img
+          src={MarketModel} // use the imported variable
+          alt="System Architecture"
+          className="max-w-4xl w-full h-auto object-contain relative z-10"
+        />
       </section>
 
 
