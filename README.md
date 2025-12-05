@@ -33,7 +33,7 @@ This project contains 14 sections, each acting as a slide:
 10. Market Model Differentiation
 11. Environmental & Social Impact
 12. Conclusion
-13. Outro
+13. Thankyou
 14. Powered By Section
 ```
 
