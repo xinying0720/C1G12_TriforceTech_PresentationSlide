@@ -481,7 +481,7 @@ const App = () => {
 
           {/* ROW 1 */}
           <div className="w-full overflow-hidden">
-              <div className="marquee-right flex whitespace-nowrap gap-70">
+              <div className="marquee-right flex whitespace-nowrap gap-60">
 
                   {/* GROUP 1 */}
                   <div className="flex items-center gap-70 min-w-max px-10">
@@ -502,7 +502,7 @@ const App = () => {
 
           {/* ROW 2 */}
           <div className="w-full overflow-hidden">
-              <div className="marquee-left flex whitespace-nowrap gap-30">
+              <div className="marquee-left flex whitespace-nowrap gap-20">
 
                   {/* GROUP 1 */}
                   <div className="flex items-center gap-30 min-w-max px-10">
