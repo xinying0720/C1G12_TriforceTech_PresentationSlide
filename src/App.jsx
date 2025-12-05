@@ -481,17 +481,17 @@ const App = () => {
 
           {/* ROW 1 */}
           <div className="w-full overflow-hidden">
-              <div className="marquee-right flex whitespace-nowrap gap-75">
+              <div className="marquee-right flex whitespace-nowrap gap-70">
 
                   {/* GROUP 1 */}
-                  <div className="flex items-center gap-75 min-w-max px-10">
+                  <div className="flex items-center gap-70 min-w-max px-10">
                       <SponsorItem img="/sponsors/sealion.png" name="Sea-Lion AI" />
                       <SponsorItem img="/sponsors/cloudflare.png" name="Cloudflare" />
                       <SponsorItem img="/sponsors/gentech.png" name="GenTech AI" />
                   </div>
 
                   {/* GROUP 2 */}
-                  <div className="flex items-center gap-75 min-w-max px-10">
+                  <div className="flex items-center gap-70 min-w-max px-10">
                       <SponsorItem img="/sponsors/sealion.png" name="Sea-Lion AI" />
                       <SponsorItem img="/sponsors/cloudflare.png" name="Cloudflare" />
                       <SponsorItem img="/sponsors/gentech.png" name="GenTech AI" />
@@ -502,20 +502,24 @@ const App = () => {
 
           {/* ROW 2 */}
           <div className="w-full overflow-hidden">
-              <div className="marquee-left flex whitespace-nowrap gap-77">
+              <div className="marquee-left flex whitespace-nowrap gap-30">
 
                   {/* GROUP 1 */}
-                  <div className="flex items-center gap-75 min-w-max px-10">
+                  <div className="flex items-center gap-30 min-w-max px-10">
                       <SponsorItem img="/sponsors/jamai.png" name="Jam AI" />
                       <SponsorItem img="/sponsors/assembly.png" name="AssemblyAI" />
                       <SponsorItem img="/sponsors/tavily.png" name="Tavily" />
+                      <SponsorItem img="/sponsors/github.png" name="GitHub" />
+                      <SponsorItem img="/sponsors/supabase.png" name="Supabase" />
                   </div>
 
                   {/* GROUP 2 */}
-                  <div className="flex items-center gap-75 min-w-max px-10">
+                  <div className="flex items-center gap-30 min-w-max px-10">
                       <SponsorItem img="/sponsors/jamai.png" name="Jam AI" />
                       <SponsorItem img="/sponsors/assembly.png" name="AssemblyAI" />
                       <SponsorItem img="/sponsors/tavily.png" name="Tavily" />
+                      <SponsorItem img="/sponsors/github.png" name="GitHub" />
+                      <SponsorItem img="/sponsors/supabase.png" name="Supabase" />
                   </div>
 
               </div>
