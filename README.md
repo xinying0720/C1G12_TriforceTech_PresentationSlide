@@ -1,5 +1,5 @@
 # C1G12_TriforceTech_PresentationSlide
-*https://m5zhxqn3-5173.asse.devtunnels.ms/*
+*https://triforcetechpresentationslidedeploy.vercel.app/*
 
 ## An Interactive Presentation Slide 
 This frontend project is an *interactive, animation-rich* presentation slide built using React, TailwindCSS, and several custom visual components. It was created to present SolarAid, a digital solution aligned with *SDG 7: Affordable and Clean Energy, developed by Triforce Tech.*
